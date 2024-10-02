@@ -1,0 +1,42 @@
+
+.hero-animation {
+    background-color: #000000;
+    height: 95vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .bubble {
+    position: relative;
+    display: flex;
+  }
+  
+  .bubble span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fdc6444, 0 0 50px #11d141, 0 0 100px #747400;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+  }
+  
+  .bubble span:nth-child(even) {
+    background-color: #e59d00;
+    box-shadow: 0 0 0 10px #6c780f44, 0 0 50px #c8a116, 0 0 100px #6e5605;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(100vh) scale(0);
+    }
+  
+    100% {
+      transform: translateY(-10vh) scale(1);
+    }
+  }
+  
